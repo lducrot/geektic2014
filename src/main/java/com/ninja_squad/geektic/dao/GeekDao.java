@@ -34,12 +34,6 @@ public class GeekDao {
         return listG;
     }
     
-    /*public List<Geek> findByIdAndSexe(Long id, String sexe) throws IOException {
-        String query = "SELECT g FROM GEEK g WHERE g.idGeek = :idGeek AND g.sexe= :sexe";
-        List<Geek> listG = em.createQuery(query, Geek.class).setParameter("idGeek", id).getResultList();
-        listG = em.createQuery(query, Geek.class).setParameter("sexe", sexe).getResultList();
-        return listG;
-    }*/
     
     /*public List<Geek> findByCentreInteret_2(List<String> centreInterets) throws IOException {
        
@@ -50,13 +44,13 @@ public class GeekDao {
         return em.createQuery(query, Geek.class)
                 .setParameter("centreInterets", centreInterets)
                 .getResultList();
-    }
+    }*/
     public List<Geek> findByCentreInteret(Long idCentreInteret) throws IOException 
     {
     	String query = "SELECT g FROM GEEK g JOIN LIEN_GEEK_CI lgci JOIN CENTREINTERET ci WHERE idCentreInteret = :idCentreInteret ORDER BY g.nom";
         List<Geek> listG = em.createQuery(query, Geek.class).setParameter("idCentreInteret", idCentreInteret).getResultList();
         return listG;
-    }*/
+    }
     
 	
 }

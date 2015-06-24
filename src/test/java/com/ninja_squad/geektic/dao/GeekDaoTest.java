@@ -2,6 +2,10 @@ package com.ninja_squad.geektic.dao;
 
 import static org.junit.Assert.*;
 
+import java.util.*;
+
+import antlr.collections.List;
+
 import com.ninja_squad.dbsetup.DbSetup;
 import com.ninja_squad.dbsetup.Operations;
 import com.ninja_squad.dbsetup.operation.Operation;
@@ -46,20 +50,12 @@ public class GeekDaoTest extends BaseDaoTest {
     }
     
     /*@Test
-    public void testFindByIdAndSexe() throws Exception {
-    	Long idAttendu = 2L;
-    	String sexeAttendu = "M";
-    	
-    	Long reponse = geekDao.findByIdAndSexe(idAttendu, sexeAttendu).get(0).getIdGeek();
-    	assertEquals(idAttendu, reponse);
-    }*/
-    
-    /*@Test
     public void testfindByCentreInteret() throws Exception {
-    	Long idCentreInteretAttendu = 1L;
-		
-    	Long reponse = geekDao.findByCentreInteret(idCentreInteretAttendu).get(0).getIdGeek();
-    	assertEquals(idCentreInteretAttendu, reponse);
+    	ArrayList<Long> idGeeks = new ArrayList();
+    	idGeeks.add(2L);
+    	idGeeks.add(3L);
+    	
+    	
     }*/
     
 }
