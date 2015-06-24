@@ -45,12 +45,21 @@ public class GeekDaoTest extends BaseDaoTest {
     	assertEquals(sexeAttendu, reponse);
     }
     
-    @Test
+    /*@Test
+    public void testFindByIdAndSexe() throws Exception {
+    	Long idAttendu = 2L;
+    	String sexeAttendu = "M";
+    	
+    	Long reponse = geekDao.findByIdAndSexe(idAttendu, sexeAttendu).get(0).getIdGeek();
+    	assertEquals(idAttendu, reponse);
+    }*/
+    
+    /*@Test
     public void testfindByCentreInteret() throws Exception {
     	Long idCentreInteretAttendu = 1L;
 		
     	Long reponse = geekDao.findByCentreInteret(idCentreInteretAttendu).get(0).getIdGeek();
     	assertEquals(idCentreInteretAttendu, reponse);
-    }
+    }*/
     
 }
