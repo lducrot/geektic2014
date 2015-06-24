@@ -29,8 +29,14 @@ public class GeekDao {
     }*/
     
     public List<Geek> findById(Long id) {
-        String query = "SELECT g FROM GEEK g WHERE g.IDGEEK = :idGeek";
+        String query = "SELECT g FROM GEEK g WHERE g.idGeek= :idGeek";
         List<Geek> listG = em.createQuery(query, Geek.class).setParameter("idGeek", id).getResultList();
+        return listG;
+    }
+    
+    public List<Geek> findBySexe(String sexe) {
+        String query = "SELECT g FROM GEEK g WHERE g.sexe= :sexe";
+        List<Geek> listG = em.createQuery(query, Geek.class).setParameter("sexe", sexe).getResultList();
         return listG;
     }
     

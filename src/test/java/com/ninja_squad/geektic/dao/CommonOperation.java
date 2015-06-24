@@ -1,6 +1,5 @@
 package com.ninja_squad.geektic.dao;
 
-import com.fasterxml.jackson.databind.deser.impl.ExternalTypeHandler.Builder;
 import com.ninja_squad.dbsetup.operation.Operation;
 
 import static com.ninja_squad.dbsetup.Operations.deleteAllFrom;
@@ -13,7 +12,7 @@ public class CommonOperation {
 	
 	public static final Operation INSERT_REFERENCE_DATA = sequenceOf(
 			insertInto("GEEK")
-				.columns("idGeek", "nom", "prenom", "email", "dateNaissance", "ville", "sexe")
+				.columns("idGeek", "nom", "prenom", "email", "ville", "sexe")
 					.values(1L, "DUCROT", "Lauriane", "lauriane.ducrot@gmail.com", "LISSIEU", "F")
 					.values(2L, "ESCURE", "Philippe", "philippe.escure@gmail.com", "LYON", "M")
 					.values(3L, "MONET", "Marine", "monet.marine@gmail.com", "ST MOLF", "F")
