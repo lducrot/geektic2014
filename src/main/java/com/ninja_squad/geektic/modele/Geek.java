@@ -1,11 +1,16 @@
 package com.ninja_squad.geektic.modele;
 
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.JoinColumn;
 
 @Entity(name="GEEK")
 public class Geek {
@@ -28,6 +33,12 @@ public class Geek {
     
     @Column(name="SEXE")
     public String sexe;
+     
+    @ManyToMany
+    @JoinTable(name="LIEN_GEEK_CI",
+    			joinColumns = @JoinColumn(name="IDGEEK"),
+    			inverseJoinColumns = @JoinColumn(name="IDCENTREINTERET"))
+    public Set<CentreInteret> centreInterets;
     
     //Getter
     public Long getIdGeek() {

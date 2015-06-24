@@ -12,7 +12,15 @@
         <!-- <h1>{{ helloMessage.message }}</h1> -->
         <h1>Bienvenue sur Geektic !</h1>
         <p>Grâce à Geektic, vous, geek de tout âge, pouvez rechercher votre âme-soeur !</p>
+        <br />
         
+        <!-- *** TEST LISTE DEROULANTE*** 
+        <div>Operator is : {{conditionFiltre.operator}}</div>
+		<select ng-model="filterCondition.operator">
+		   <option ng-repeat="operator in operators" value="{{operator.value}}">{{operator.displayName}}</option>
+		</select>
+		<!-- *** FIN TEST *** -->
+		
         <!-- Contenu "ajax" -->
         <div ng-view></div>
     </body>
